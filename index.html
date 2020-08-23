@@ -14,15 +14,17 @@
 </header>
 
 <body>
-    <div class = "container">
-        <div class = "drawing-grid"></div>
-            <div id="spec-instructions">Enter size of board:</div>
+    <div class = "container" id = "container">
+        <div class = "drawing-grid" id = "drawing-grid">
+        </div>
+        <div id="spec-instructions">Enter size of board below (between 0 & 100):</div>
             <form class = "specs">
                 <label for="rows">Rows:</label><br>
-                <input type="text" id="rows" name="rows"><br>
+                <input type="number" id="rows" name="rows"><br>
                 <label for="columns">Columns</label><br>
-                <input type="text" id="columns" name="columns">
-            </form> 
+                <input type="number" id="columns" name="columns">
+            </form>
+        <button id="submit">Submit</button>
         <button id="clear">Clear Drawing Board</button>
 
     </div>
