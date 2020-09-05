@@ -35,7 +35,7 @@ submit.addEventListener(`click`,() => {
     document.getElementById(`drawing-grid`).style.gridTemplateColumns = columnSize;
     document.getElementById(`drawing-grid`).style.gridTemplateRows = rowSize;
     drawingGrid.addEventListener(`mouseover`,(e) => {
-        var x = e.clientX, y = e.clientY;
+        let x = e.clientX, y = e.clientY;
         elementMouseIsOver = document.elementFromPoint(x, y);
         elementMouseIsOver.style.backgroundColor = "black"; 
     });
