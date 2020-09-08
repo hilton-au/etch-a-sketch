@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick Hand">
 </head>
 
-<header>
-    <div class= "titleBar">
-        <h1 class = "title">Etch-a-sketch</h1>
-    </div>
-</header>
-
 <body>
+    <header>
+        <div class= "titleBar">
+            <h1 class = "title">Etch-a-sketch</h1>
+        </div>
+    </header>
+
     <div class = "container" id = "container">
         <div class = "drawing-grid" id = "drawing-grid">
         </div>
         <div id="spec-instructions">Enter size of board below (between 0 & 100):</div>
             <form class = "specs">
                 <label for="rows">Rows:</label><br>
-                <input type="number" id="rows" name="rows"><br>
+                <input type="number" id="rows" name="rows" value=0><br>
                 <label for="columns">Columns</label><br>
-                <input type="number" id="columns" name="columns">
+                <input type="number" id="columns" name="columns" value=0><br>
             </form>
         <button id="submit">Submit</button>
         <button id="clear">Clear Drawing Board</button>
