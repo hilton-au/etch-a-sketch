@@ -24,8 +24,8 @@ let removeAllChildNodes = function(parent){
 submit.addEventListener(`click`,() => {
     rows = document.querySelector(`#rows`).value;
     columns = document.querySelector(`#columns`).value;
-    if (0 > rows || rows >  100 || 0 > columns || columns > 100){
-        alert("Please choose numbers between 0 and 100.");
+    if (0 > rows || rows >  50 || 0 > columns || columns > 50){
+        alert("Please choose numbers between 0 and 50.");
     }
     else {
     let rowSize = `repeat(` + rows + `,` + (100/rows) + `%)`;
@@ -33,14 +33,21 @@ submit.addEventListener(`click`,() => {
     removeAllChildNodes(drawingGrid);
     newDiv();
     document.getElementById(`drawing-grid`).style.gridTemplateColumns = columnSize;
-    document.getElementById(`drawing-grid`).style.gridTemplateRows = rowSize;
+    document.getElementById(`drawing-grid`).style.gridTemplateRows = rowSize;    
+    let toggle = false;
+    drawingGrid.addEventListener(`mousedown`,(e) => {
+        toggle = true;
+    });
+    drawingGrid.addEventListener(`mouseup`,(e) => {
+        toggle = false
+    });
     drawingGrid.addEventListener(`mouseover`,(e) => {
         let x = e.clientX, y = e.clientY;
         elementMouseIsOver = document.elementFromPoint(x, y);
-        elementMouseIsOver.style.backgroundColor = "black"; 
-    });
- }
-});
+        if (toggle == true){
+            elementMouseIsOver.style.backgroundColor = "black";
+        }});
+}});
 
 
 let clearCells = function(cell){

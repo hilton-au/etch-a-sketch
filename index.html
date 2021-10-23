@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick Hand">
 </head>
 
-<body>
+<body ondragstart="return false;" ondrop="return false;">
     <div class = "container" id = "container">
         <header>
                 <h1 class = "title">Etch-a-sketch</h1>
         </header>
         <div class = "drawing-grid" id = "drawing-grid">
         </div>
-        <div id="spec-instructions">Enter size of board below (between 0 & 100):</div>
+        <div id="spec-instructions">Enter size of board below (between 0 & 50):</div>
             <form class = "specs">
                 <label for="rows">Rows:</label><br>
                 <input type="number" id="rows" name="rows" value=0><br>
